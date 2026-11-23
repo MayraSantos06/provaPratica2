@@ -1,4 +1,6 @@
-public class VeiculoMoto extends Veiculo{
+public class VeiculoMoto extends Veiculo implements Inspecionavel{
+
+
 
     private final int cilindradas;
 
@@ -12,4 +14,10 @@ public class VeiculoMoto extends Veiculo{
     public int getCilindradas(){
         return cilindradas;
     }
+
+    @Override
+     public abstract void realizarInspecao(){
+
+     }
 }
+

@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 
-public class AluguelExecutivo extends Aluguel {
+public class AluguelExecutivo extends Aluguel implements Avaliavel{
     
     private final String motorista;
-    private final String avaliacao;
     private ArrayList<Veiculo> veiculos;
 
     public AluguelExecutivo (String nomeCliente, int quantidadeDias, double valorTotal, StatusAluguel status){
@@ -11,15 +10,11 @@ public class AluguelExecutivo extends Aluguel {
         super(nomeCliente, quantidadeDias, valorTotal, status);
         
         this.motorista = motorista;
-        this.avaliacao = avaliacao;
     }
 
     public String getMotorista(){
         return motorista;
     }
-
-    public String getAvaliacao(){
-        return avaliacao;
 
     @Override
     public abstract void exibirDetalhes(){
@@ -51,6 +46,10 @@ public class AluguelExecutivo extends Aluguel {
             System.out.println("Nenhum veiculo para exibir.");
         }
             
+        @Override
+        public abstract void avaliar(int nota){
+            
+        }
         
         }
     

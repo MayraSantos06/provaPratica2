@@ -1,4 +1,4 @@
-public class VeiculoCarro extends Veiculo {
+public class VeiculoCarro extends Veiculo implements Avaliavel {
 
     private final int portas;
     
@@ -11,6 +11,11 @@ public class VeiculoCarro extends Veiculo {
     
     public int getPortas(){
         return portas;
+    }
+
+    @Override
+    public abstract void avaliar(int nota){
+
     }
     
 }

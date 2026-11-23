@@ -1,4 +1,6 @@
-public class VeiculoVan extends Veiculo{
+public class VeiculoVan extends Veiculo implements Avaliavel, Inspecionavel{
+
+
 
     private final int maxPassageiros;
 
@@ -10,4 +12,15 @@ public class VeiculoVan extends Veiculo{
     public int getMaxPassageiros(){
         return maxPassageiros;
     }
+
+    @Override
+    public abstract void realizarInspecao(){
+
+    }
+
+    @Override
+    public abstract void avaliar(int nota){
+
+    }
 }
+
